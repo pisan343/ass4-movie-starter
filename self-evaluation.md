@@ -94,5 +94,11 @@ explain returning a movie that customer has not checked out: TODO(student)
 
 any static_cast or dynamic_cast used: TODO(student)
 
+## Bonus +5
 
-Q: Total points: ADD_ALL_POINTS (max 25)
+Are there multiple files, of the form runit-without-XXX, where the same set of files will compile and run excluding some of the commands or genres? TODO(student)
+
+
+
+
+Q: Total points: ADD_ALL_POINTS (max 25 (+ 5 Bonus))
