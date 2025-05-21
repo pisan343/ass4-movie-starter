@@ -2,7 +2,7 @@
 
 # Run this script as `./create-output.sh > output.txt 2>&1`
 
-# How we want to call our executable, 
+# How we want to call our executable,
 # possibly with some command line parameters
 EXEC_PROGRAM="./a.out "
 
@@ -29,7 +29,7 @@ echo "1. If the section below is empty, the program compiles "
 echo "   without warnings with -Wall -Wextra flags"
 echo "====================================================="
 
-g++ -g -std=c++11 -Wall -Wextra -Wno-sign-compare *.cpp
+g++ -g -Wall -Wextra -Wno-sign-compare *.cpp
 
 echo "====================================================="
 echo "2. If the section below is empty or has the expected output "
@@ -45,7 +45,7 @@ echo "   (ignore warnings from system headers, such as \"13554 warnings generate
 echo "====================================================="
 
 if hash clang-tidy 2>/dev/null; then
-  clang-tidy *.cpp -- -std=c++11
+  clang-tidy *.cpp --
 else
   echo "WARNING: clang-tidy not available."
 fi
@@ -73,7 +73,7 @@ echo "====================================================="
 
 rm ./a.out 2>/dev/null
 
-g++ -std=c++11 -fsanitize=address -fno-omit-frame-pointer -g *.cpp
+g++ -fsanitize=address -fno-omit-frame-pointer -g *.cpp
 # Execute program
 $EXEC_PROGRAM > /dev/null 2> /dev/null
 
@@ -86,7 +86,7 @@ echo "====================================================="
 rm ./a.out 2>/dev/null
 
 if hash valgrind 2>/dev/null; then
-  g++ -g -std=c++11 *.cpp
+  g++ -g *.cpp
   # redirect program output to /dev/null will running valgrind
   valgrind --log-file="valgrind-output.txt" $EXEC_PROGRAM > /dev/null 2>/dev/null
   cat valgrind-output.txt
