@@ -1,22 +1,22 @@
 # Self-Evaluation
 
-## Name(s): 
+## Name(s):
 
-Out of 25 points. Use output.txt created using 
-`./create-output.sh > output.txt 2>&1` for guidance.
+Out of 25 points. Use output.txt created using
+`./run-full.sh > output.txt 2>&1` for guidance.
 
 Complete all questions with "Q:"
 
 Q: Does the program compile and run to completion: Yes/No
 
-- If the program does not compile or gives a segmentation error when run, 
+- If the program does not compile or gives a segmentation error when run,
 the maximum possible grade is 50%. No need to continue with the rest of self-evaluation
 
 Q: All public functions have been implemented: ENTER_NUMBER
 
 - -2 for each functionality not implemented
 
-For each command, state Full, Partial or None to indicate 
+For each command, state Full, Partial or None to indicate
 if it has been fully, partially or not implemented at all.
 Explain any partial implementations.
 
@@ -65,7 +65,7 @@ invalid command code: TODO(student)
 invalid movie type: TODO(student)
 
 invalid customer ID: TODO(student)
- 
+
 invalid movie: TODO(student)
 
 factory classes: TODO(student)
